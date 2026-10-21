@@ -1,0 +1,1939 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07130f">
+    <title>Invest - Finance Dashboard</title>
+ 
+</head>
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="top-header">
+        <div>
+            <p class="small-text">WELCOME BACK</p>
+            <h2>Invest <span class="green">REDE</span></h2>
+        </div>
+        <div class="profile-icon" ><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user preview-icon"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg></div>
+    </header><hr><br>
+
+    <!-- HOME PAGE -->
+    <section class="page active" id="homePage">
+
+        <div class="balance-card">
+            <div class="balance-top">
+                <span>Available Balance</span>
+                <span class="wallet-icon" ><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark preview-icon"><path d="M10 18v-7"/><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg></span>
+            </div>
+
+            <h1>₹ <span id="availableBalance">0.00</span></h1>
+            <p class="balance-note">Your available wallet balance</p>
+
+            <div class="balance-actions">
+
+                <button class="outline-btn" data-page="withdrawPage">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                stroke-linejoin="round" class="lucide lucide-external-link preview-icon">
+                <path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> Withdraw
+                </button>
+            </div>
+        </div>
+
+        <div class="section-heading">
+            <h3>Overview</h3>
+            <span class="muted">Your account</span>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-line preview-icon"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+                <p>Total Invested</p>
+                <h3>₹ <span id="totalInvested">0.00</span></h3>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-coins preview-icon"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg></div>
+                <p>Total Commission</p>
+                <h3>₹ <span id="homeCommission">0.00</span></h3>
+            </div>
+        </div>
+
+        <div class="section-heading">
+            <h3>Start Investing</h3>
+            <button class="text-btn" data-page="investPage">
+                View all →
+            </button>
+        </div>
+
+        <div class="mini-invest-card">
+            <div>
+                <span class="plan-tag">ACTIVATE PLAN</span>
+                <h3>Begin with ₹90</h3>
+                <p>Explore the available investment plans.</p>
+            </div>
+            <button class="round-btn" data-page="investPage"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+
+        <div class="notice-card">
+            <span>ⓘ</span>
+            <p>Investment returns are not guaranteed. Review the risks before investing.</p>
+        </div>
+
+    </section>
+
+    <!-- INVEST PAGE -->
+    <section class="page" id="investPage">
+
+        <div class="page-heading">
+            <p class="small-text">GROW YOUR FUTURE</p>
+            <h1>Invest <span class="green">Smart.</span></h1>
+            <p class="muted">Build your financial future step by step.</p>
+        </div>
+
+        <!-- Place invest-banner.png beside index.html -->
+        <div class="investment-banner">
+            <img src="invest_photo3.png"
+                 alt="Invest, grow and build your future">
+        </div>
+
+        <div class="feature-row">
+            <div class="feature">
+                <span><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined preview-icon"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg></span>
+                <b>Grow</b>
+            </div>
+            <div class="feature">
+                <span><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield preview-icon"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+                <b>Secure</b>
+            </div>
+
+        </div>
+
+        <div class="section-heading">
+            <h3>Investment Plans</h3>
+            <span class="plan-tag">FROM ₹90 - ₹10000</span>
+        </div>
+
+
+        <!------------------------------ PLAN 0  ---------------------------------------------->
+        <div class="investment-plan">
+            <div class="plan-top">
+                <div>
+                    <h3>ACTIVATE PLAN</h3>
+                    <span class="plan-tag">FIRST BUY PLAN</span>
+                    <h3>Starter Investment</h3>
+                </div>
+                <div class="plan-symbol">₹</div>
+            </div>
+
+            <h2>₹90</h2>
+            <p class="muted">Minimum investment amount</p>
+
+            <div class="plan-divider"></div>
+
+            <div class="plan-detail">
+                <span>Investment amount</span>
+                <b>₹90</b>
+            </div>
+
+            <div class="plan-detail">
+                <span>Days</span>
+                <b>13 - Days</b>
+            </div>
+            <div class="plan-detail">
+                <span>Returns</span>
+                <b>₹700</b>
+            </div>
+
+
+            <button class="primary-btn invest-btn" data-amount="200">
+                <a href="paymentp.html">
+                Invest ₹90</a>
+            </button>
+        </div>
+
+        <!--------------------------- PLAN 1 ------------------>
+        <div class="investment-plan">
+            <div class="plan-top">
+                <div>
+                    <span class="plan-tag">BASIC</span>
+                    <h3>Starter Investment</h3>
+                </div>
+                <div class="plan-symbol">₹</div>
+            </div>
+
+            <h2>₹200</h2>
+            <p class="muted">Minimum investment amount</p>
+
+            <div class="plan-divider"></div>
+
+            <div class="plan-detail">
+                <span>Investment amount</span>
+                <b>₹200</b>
+            </div>
+
+            <div class="plan-detail">
+                <span>Days</span>
+                <b>19 - Days</b>
+            </div>
+            <div class="plan-detail">
+                <span>Returns</span>
+                <b>₹3000</b>
+            </div>
+
+
+            <button class="primary-btn invest-btn" data-amount="200">
+                <a href="paymentp.html">
+                Invest ₹200</a>
+            </button>
+        </div>
+
+        <!---------------------- PLAN 2 ----------------------------------->
+        <div class="investment-plan">
+            <div class="plan-top">
+                <div>
+                    <span class="plan-tag">STANDARD</span>
+                    <h3>Growth Investment</h3>
+                </div>
+                <div class="plan-symbol">₹</div>
+            </div>
+
+            <h2>₹500</h2>
+            <p class="muted">Investment amount</p>
+
+            <div class="plan-divider"></div>
+
+            <div class="plan-detail">
+                <span>Investment amount</span>
+                <b>₹500</b>
+            </div>
+
+            <div class="plan-detail">
+                <span>Days</span>
+                <b>4 - Days</b>
+            </div>
+            <div class="plan-detail">
+                <span>Returns</span>
+                <b>₹2000</b>
+            </div>
+
+            <button class="primary-btn invest-btn" data-amount="500">
+                <a href="paymentp.html">
+                Invest ₹500</a>
+            </button>
+        </div>
+
+        <!------------------------- PLAN 3 ----------------------------------->
+        <div class="investment-plan">
+            <div class="plan-top">
+                <div>
+                    <span class="plan-tag">PREMIUM</span>
+                    <h3>Premium Investment</h3>
+                </div>
+                <div class="plan-symbol">₹</div>
+            </div>
+
+            <h2>₹1,000</h2>
+            <p class="muted">Investment amount</p>
+
+            <div class="plan-divider"></div>
+
+            <div class="plan-detail">
+                <span>Investment amount</span>
+                <b>₹1,000</b>
+            </div>
+            <div class="plan-detail">
+                <span>Days</span>
+                <b>7 - Days</b>
+            </div>
+            <div class="plan-detail">
+                <span>Returns</span>
+                <b>₹4000</b>
+            </div>
+
+            <button class="primary-btn invest-btn" data-amount="1000">
+                <a href="paymentp.html">
+                Invest ₹1,000</a>
+            </button>
+        </div>
+
+        <!---------------------------- PLAN 4 ------------------------------------->
+        <div class="investment-plan">
+            <div class="plan-top">
+                <div>
+                    <span class="plan-tag">ADVANCED</span>
+                    <h3>Advanced Investment</h3>
+                </div>
+                <div class="plan-symbol">₹</div>
+            </div>
+
+            <h2>₹2,000</h2>
+            <p class="muted">Investment amount</p>
+
+            <div class="plan-divider"></div>
+
+            <div class="plan-detail">
+                <span>Investment amount</span>
+                <b>₹2,000</b>
+            </div>
+            <div class="plan-detail">
+                <span>Days</span>
+                <b>10 - Days</b>
+            </div>
+            <div class="plan-detail">
+                <span>Returns</span>
+                <b>₹7000</b>
+            </div>
+
+            <button class="primary-btn invest-btn" data-amount="2000">
+                <a href="paymentp.html">
+                Invest ₹2,000</a>
+            </button>
+        </div>
+
+        <!--------------------------- PLAN 5 ----------------------------------------->
+        <div class="investment-plan">
+            <div class="plan-top">
+                <div>
+                    <span class="plan-tag">PRO</span>
+                    <h3>Pro Investment</h3>
+                </div>
+                <div class="plan-symbol">₹</div>
+            </div>
+
+            <h2>₹5,000</h2>
+            <p class="muted">Investment amount</p>
+
+            <div class="plan-divider"></div>
+
+            <div class="plan-detail">
+                <span>Investment amount</span>
+                <b>₹5,000</b>
+            </div>
+             <div class="plan-detail">
+                <span>Days</span>
+                <b>3 - Days</b>
+            </div>
+            <div class="plan-detail">
+                <span>Returns</span>
+                <b>₹14000</b>
+            </div>
+
+            <button class="primary-btn invest-btn" data-amount="5000" href="paymentpage.html">
+                <a href="paymentp.html">
+               Invest ₹5,000 </a>
+            </button>
+        </div>
+
+        <div class="notice-card">
+            <span>ⓘ</span>
+            <p>Review the investment terms and risks before making a financial commitment.</p>
+        </div>
+
+    </section>
+
+    <!-- REFER PAGE -->
+    <section class="page" id="referPage">
+
+        <div class="page-heading">
+            <p class="small-text">INVITE YOUR FRIENDS</p>
+            <h1>Refer & <span class="green">Earn</span></h1>
+            <p class="muted">Share your invitation code with others.</p>
+        </div>
+
+        <div class="referral-banner">
+            <div class="referral-circle"><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined preview-icon"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg></div>
+            <h2>Grow Together</h2>
+            <p>Invite friends to learn about the platform.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">♙</div>
+                <p>Invite Count Members</p>
+                <h2 id="inviteCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">₹</div>
+                <p>Commission Amount</p>
+                <h2>₹ <span id="referCommission">0.00</span></h2>
+            </div>
+        </div>
+
+        <div class="referral-code-card">
+            <p class="muted">YOUR INVITATION CODE</p>
+            <div class="code-row">
+                <h2 id="invitationCode">GSKSHJ</h2>
+                <button class="copy-btn" id="copyCodeBtn">Copy</button>
+            </div>
+            <div class="referral-code-card">
+                 <button class="copy-btn" id="copyfullCodeBtn"><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-2 preview-icon"><path d="M9 17H7A5 5 0 0 1 7 7h2"/>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg></button> <inv class="invite-mm">http://www.investrede</inv> 
+            </div><br>
+            <p class="small-text">Share your invitation code</p>
+        </div>
+
+        <div class="notice-card">
+            <span>ⓘ</span>
+            <p>Referral counts and commission are updated when a referral system is connected.</p>
+        </div>
+
+    </section>
+
+    <!-- MY PAGE -->
+    <section class="page" id="myPage">
+
+        <div class="page-heading">
+            <p class="small-text">YOUR ACCOUNT</p>
+            <h1>My <span class="green">Profile</span></h1>
+        </div>
+
+        <div class="profile-card">
+            <div class="large-profile-icon"><svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round preview-icon"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
+            <div class="profile-details">
+                <h3 id="profileName">Your Name</h3>
+                <p id="profileEmail">your@email.com</p>
+            </div>
+        </div>
+
+        <div class="section-heading">
+            <h3>Wallet Services</h3>
+        </div>
+
+        <!-- withdr histey click-->
+
+        <div class="service-card" data-page="depositPage">
+            <div class="service-icon deposit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download preview-icon">
+                 <path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <path d="m7 10 5 5 5-5"/></svg>
+
+            </div>
+            <div class="service-text">
+                <h3>Withdrawal Histry</h3>
+                <p>All Histry Show</p>
+            </div>
+            <span class="service-arrow">›</span>
+        </div>
+
+
+        <!-- withdr click  -->
+
+        <div class="service-card" data-page="withdrawPage">
+            <div class="service-icon withdraw-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                stroke-linejoin="round" class="lucide lucide-external-link preview-icon">
+                <path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </div>
+
+
+            <div class="service-text">
+                <h3>Withdrawal</h3>
+                <p>Request a wallet withdrawal</p>
+            </div>
+            <span class="service-arrow">›</span>
+        </div>
+
+
+                <!-- Custemor click  -->
+
+        <div class="service-card" data-page="custemor-page">
+            <div class="service-icon withdraw-icon">
+        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-headset preview-icon">
+         <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+         <path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+            </div>
+
+
+            <div class="service-text">
+                <h3>Custemor Care</h3>
+                <p>All Problems</p>
+            </div>
+            <span class="service-arrow">›</span>
+        </div>
+        
+
+
+
+        <div class="section-heading">
+            <h3>Account Information</h3>
+        </div>
+
+        <div class="info-card">
+            <label for="nameInput">Full Name</label>
+            <input type="text" id="nameInput"
+                   placeholder="Enter your name"
+                   autocomplete="name">
+
+            <label for="emailInput">Email ID</label>
+            <input type="email" id="emailInput"
+                   placeholder="Enter your email"
+                   autocomplete="email">
+
+            <button class="primary-btn" id="saveProfileBtn">
+                Save Profile
+            </button>
+        </div>
+
+        <div class="notice-card">
+            <span>ⓘ</span>
+            <p>Profile changes on this page are not stored in a secure server.</p>
+        </div>
+
+    </section>
+
+    <!-- Withde histry PAGE -->
+<section class="page sub-page" id="depositPage">
+
+        <div class="sub-header">
+            <button class="back-btn" data-back="true">
+<svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h2>Withdraw Histry</h2>
+        </div>
+
+        <div class="form-card">
+            <div class="form-top-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download preview-icon">
+                 <path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <path d="m7 10 5 5 5-5"/></svg>
+            </div>
+            <h2>Last 10 Withdraw  Histry only Show !</h2><br><hr>
+            <p class="muted-a"> No Record !</p>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- WITHDRAWAL PAGE -->
+<section class="page sub-page" id="withdrawPage">
+
+        <div class="sub-header">
+            <button class="back-btn" data-back="true">
+             <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h2>Withdrawal</h2>
+        </div>
+
+        <div class="form-card">
+            <div class="form-top-icon">          
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                stroke-linejoin="round" class="lucide lucide-external-link preview-icon">
+                <path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </div>
+            <h2>Bank Withdrawal</h2>
+            <p class="muted">Enter your bank account details.</p>
+
+            <label for="withdrawAmount">Withdrawal Amount (₹)</label>
+            <input type="number" id="withdrawAmount"
+                   placeholder="Enter amount"
+                   min="1" step="1">
+
+            <label for="accountNumber">Account Number</label>
+            <input type="text" id="accountNumber"
+                   placeholder="Enter bank account number"
+                   inputmode="numeric"
+                   autocomplete="off">
+
+            <label for="ifscCode">IFSC Code</label>
+            <input type="text" id="ifscCode"
+                   placeholder="Example: SBIN0001234"
+                   maxlength="11"
+                   autocapitalize="characters">
+
+            <label for="holderName">Account Holder Name</label>
+            <input type="text" id="holderName"
+                   placeholder="Enter account holder name"
+                   autocomplete="name">
+
+            <button class="primary-btn" id="withdrawBtn">
+                Submit Withdrawal Request
+            </button>
+
+            <p class="secure-note">
+                Bank transfers require a secure, verified backend.
+            </p>
+        </div>
+
+    </section>
+
+
+
+        <!-- Customer PAGE -->
+<section class="page sub-page" id="custemor-page">
+
+        <div class="sub-header">
+            <button class="back-btn" data-back="true">
+           <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h2>Custemor</h2>
+        </div>
+        <!-- Telegram  Channel  -->
+
+        <div class="service-card" data-page="">
+            <div class="service-icon withdraw-icon">
+            <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                stroke-linejoin="round" class="lucide lucide-send preview-icon">
+                   <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/>
+                      <path d="m21.854 2.147-10.94 10.939"/></svg>
+            </div>
+
+
+            <div class="service-text">
+                <h3>Telegram</h3>
+                <p>Request a wallet withdrawal</p>
+            </div>
+            <span class="service-arrow">›</span>
+        </div>
+
+
+                <!--  Telegram Chat ( Help )  -->
+
+        <div class="service-card" data-page="custemor-page">
+            <div class="service-icon withdraw-icon">
+        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-headset preview-icon">
+         <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+         <path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+            </div>
+
+
+            <div class="service-text">
+                <h3>Telegram Chat ( Help )</h3>
+                <p>All Problems</p>
+            </div>
+            <span class="service-arrow">›</span>
+        </div>
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+
+        <button class="nav-item active" data-page="homePage">
+            <span class="nav-icon">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house preview-icon">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </span>
+            <span>Home</span>
+        </button>
+
+        <button class="nav-item" data-page="investPage">
+            <span class="nav-icon">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign preview-icon">
+                 <circle cx="12" cy="12" r="10"/>
+                 <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+                    <path d="M12 18V6"/></svg>
+            </span>
+            <span>Invest</span>
+           
+        </button>
+
+        <button class="nav-item" data-page="referPage">
+            <span class="nav-icon">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users preview-icon">
+                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                 <path d="M16 3.128a4 4 0 0 1 0 7.744"/>
+                 <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <circle cx="9" cy="7" r="4"/></svg>
+            </span>
+            <span>Refer</span>
+        </button>
+
+        <button class="nav-item" data-page="myPage">
+            <span class="nav-icon">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon">
+                 <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                 <circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <span>My</span>
+        </button>
+
+    </nav>
+
+    <!-- NOTIFICATION -->
+    <div class="toast" id="toast" role="status"
+         aria-live="polite"></div>
+
+</div>
+
+
+
+<script>
+
+    
+/* =========================
+   INVEST WEBSITE - FULL JS
+========================= */
+
+const pages = document.querySelectorAll(".page");
+const navItems = document.querySelectorAll(".nav-item");
+const toast = document.getElementById("toast");
+
+let previousPage = "myPage";
+let toastTimer;
+
+/* SHOW NOTIFICATION */
+
+function showMessage(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(function () {
+        toast.classList.remove("show");
+    }, 3500);
+}
+
+/* PAGE NAVIGATION */
+
+function openPage(pageId) {
+    const targetPage = document.getElementById(pageId);
+
+    if (!targetPage) {
+        return;
+    }
+
+    if (pageId === "depositPage" ||
+        pageId === "withdrawPage") {
+        previousPage = "myPage";
+    }
+
+    pages.forEach(function (page) {
+        page.classList.remove("active");
+    });
+
+    targetPage.classList.add("active");
+
+    navItems.forEach(function (item) {
+        item.classList.remove("active");
+    });
+
+    const activeNav = document.querySelector(
+        '.nav-item[data-page="' + pageId + '"]'
+    );
+
+    if (activeNav) {
+        activeNav.classList.add("active");
+    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+/* OPEN ALL LINKED PAGES */
+
+document.querySelectorAll("[data-page]").forEach(function (button) {
+    button.addEventListener("click", function () {
+        openPage(button.dataset.page);
+    });
+});
+
+/* BACK BUTTON */
+
+document.querySelectorAll("[data-back]").forEach(function (button) {
+    button.addEventListener("click", function () {
+        openPage(previousPage);
+    });
+});
+
+/* SAVE PROFILE */
+
+document.getElementById("saveProfileBtn")
+    .addEventListener("click", function () {
+
+        const name = document.getElementById("nameInput")
+            .value.trim();
+
+        const email = document.getElementById("emailInput")
+            .value.trim();
+
+        if (!name || !email) {
+            showMessage("Enter your name and email ID.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showMessage("Enter a valid email address.");
+            return;
+        }
+
+        document.getElementById("profileName")
+            .textContent = name;
+
+        document.getElementById("profileEmail")
+            .textContent = email;
+
+        showMessage("Profile updated successfully.");
+    });
+
+/* COPY INVITATION CODE */
+
+document.getElementById("copyCodeBtn")
+    .addEventListener("click", async function () {
+
+        const code = document.getElementById("invitationCode")
+            .textContent.trim();
+
+        try {
+            await navigator.clipboard.writeText(code);
+            showMessage("Invitation code copied!");
+        } catch (error) {
+            showMessage("Copy this invitation code: " + code);
+        }
+    });
+
+    document.getElementById("copyfullCodeBtn")
+    .addEventListener("click", async function () {
+
+        const code = document.getElementById("invitationCode")
+            .textContent.trim();
+
+        try {
+            await navigator.clipboard.writeText(code);
+            showMessage("Invitation Browser code copied!");
+        } catch (error) {
+            showMessage("Copy this invitation code: " + code);
+        }
+    });
+
+/* INVEST PLAN BUTTONS */
+
+document.querySelectorAll(".invest-bt")
+    .forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const amount = Number(button.dataset.amount);
+
+            if (!Number.isFinite(amount) ||
+                amount < 90 ||
+                !Number.isInteger(amount)) {
+
+                showMessage("Minimum investment is ₹90.");
+                return;
+            }
+
+            showMessage(
+                "₹" + amount.toLocaleString("en-IN") +
+                " investment selected. Payment processing is required."
+            );
+        });
+    });
+
+/* DEPOSIT BUTTON */
+
+document.getElementById("depositBtn")
+    .addEventListener("click", function () {
+
+        const amount = Number(
+            document.getElementById("depositAmount").value
+        );
+
+        const paymentMethod = document.querySelector(
+            'input[name="paymentMethod"]:checked'
+        );
+
+        if (!Number.isFinite(amount) ||
+            amount < 90 ||
+            !Number.isInteger(amount)) {
+
+            showMessage("Enter a whole amount of at least ₹90.");
+            return;
+        }
+
+        if (!paymentMethod) {
+            showMessage("Choose a payment method.");
+            return;
+        }
+
+        showMessage(
+            paymentMethod.value +
+            " selected. A verified payment gateway is required."
+        );
+    });
+
+/* WITHDRAWAL BUTTON */
+
+document.getElementById("withdrawBtn")
+    .addEventListener("click", function () {
+
+        const amount = Number(
+            document.getElementById("withdrawAmount").value
+        );
+
+        const accountNumber = document.getElementById("accountNumber")
+            .value.trim();
+
+        const ifscCode = document.getElementById("ifscCode")
+            .value.trim().toUpperCase();
+
+        const holderName = document.getElementById("holderName")
+            .value.trim();
+
+        if (!Number.isFinite(amount) ||
+            amount <= 0 ||
+            !Number.isInteger(amount)) {
+
+            showMessage("Enter a valid withdrawal amount.");
+            return;
+        }
+
+        if (!/^\d{6,20}$/.test(accountNumber)) {
+            showMessage("Check your account number.");
+            return;
+        }
+
+        if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifscCode)) {
+            showMessage("Enter a valid IFSC code.");
+            return;
+        }
+
+        if (!/^[A-Za-z][A-Za-z .'-]{1,99}$/.test(holderName)) {
+            showMessage("Enter the account holder name.");
+            return;
+        }
+
+        showMessage(
+            "Details validated. Secure withdrawal processing is required."
+        );
+    });
+
+/* OPEN HOME PAGE ON START */
+
+openPage("homePage");
+
+</script>
+
+<style>
+
+
+
+/* =========================
+   INVEST WEBSITE - FULL CSS
+========================= */
+
+:root {
+    --bg: #07130f;
+    --card: #101f19;
+    --card-light: #172a21;
+    --green: #36d68b;
+    --green-dark: #159963;
+    --white: #ffffff;
+    --muted: #9baea4;
+    --border: #263b30;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+}
+
+.app {
+    width: 100%;
+    max-width: 520px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 22px 18px 110px;
+    position: relative;
+}
+
+/* HEADER */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.top-header h2 {
+    font-size: 29px;
+    margin-top: 5px;
+    letter-spacing: -1px;
+}
+
+.green {
+    color: var(--green);
+}
+
+.small-text {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+}
+
+.profile-icon,
+.large-profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #36d68b, #128653);
+    color: #062216;
+    font-weight: 800;
+    border-radius: 50%;
+}
+
+.profile-icon {
+    width: 43px;
+    height: 43px;
+    font-size: 20px;
+}
+
+/* PAGE DISPLAY */
+
+.page {
+    display: none;
+    animation: fadeIn 0.25s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BALANCE CARD */
+
+.balance-card {
+    background: linear-gradient(
+        135deg,
+        #178b5b,
+        #0b5338 75%,
+        #10432f
+    );
+    padding: 24px 22px;
+    border-radius: 23px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.balance-card::after {
+    content: "";
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    right: -70px;
+    top: -85px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 22px rgba(255, 255, 255, 0.035),
+        0 0 0 45px rgba(255, 255, 255, 0.025);
+    pointer-events: none;
+}
+
+.balance-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d9f7e7;
+    font-size: 13px;
+}
+
+.wallet-icon {
+    font-size: 27px;
+}
+
+.balance-card h1 {
+    font-size: clamp(28px, 7vw, 37px);
+    margin: 16px 0 7px;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+}
+
+.balance-note {
+    font-size: 12px;
+    color: #c5ead7;
+}
+
+.balance-actions {
+    display: flex;
+    gap: 11px;
+    margin-top: 25px;
+}
+
+.white-btn,
+.outline-btn {
+    flex: 1;
+    min-height: 45px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.white-btn {
+    background: white;
+    color: #087747;
+    border: none;
+}
+
+.outline-btn {
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: white;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 28px 0 15px;
+}
+
+.section-heading h3 {
+    font-size: 17px;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+
+
+}
+
+.muted-a {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 190px;
+
+
+}
+
+.text-btn {
+    color: var(--green);
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* STATS */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 17px 14px;
+    min-width: 0;
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    background: rgba(54, 214, 139, 0.12);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.stat-card h3,
+.stat-card h2 {
+    font-size: clamp(17px, 4vw, 23px);
+    margin-top: 8px;
+    overflow-wrap: anywhere;
+}
+
+/* STARTER CARD */
+
+.mini-invest-card {
+    background: linear-gradient(135deg, #142b20, #101d17);
+    border: 1px solid #294635;
+    padding: 19px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.plan-tag {
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.mini-invest-card h3 {
+    font-size: 16px;
+    margin: 10px 0 7px;
+}
+
+.mini-invest-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.round-btn {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: var(--green);
+    color: #062216;
+    font-size: 21px;
+}
+
+/* NOTICE */
+
+.notice-card {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    background: #121f19;
+    border: 1px solid #263b30;
+    border-radius: 13px;
+    padding: 14px;
+    margin-top: 18px;
+}
+
+.notice-card > span {
+    color: var(--green);
+    font-size: 18px;
+}
+
+.notice-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* INVEST PAGE */
+
+.page-heading {
+    margin: 7px 0 23px;
+}
+
+.page-heading h1 {
+    font-size: 30px;
+    margin: 9px 0;
+    letter-spacing: -1px;
+}
+
+.page-heading > .muted {
+    font-size: 13px;
+}
+
+.investment-banner {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 19px;
+    border: 1px solid var(--border);
+    background: var(--card);
+}
+
+.investment-banner img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 15px 0 25px;
+}
+
+.feature {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 13px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+}
+
+.feature span {
+    color: var(--green);
+    font-size: 22px;
+}
+
+.feature b {
+    font-size: 11px;
+    text-align: center;
+}
+
+/* INVESTMENT PLANS */
+
+.investment-plan {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 19px;
+    margin-bottom: 15px;
+}
+
+.plan-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.plan-top h3 {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.plan-symbol {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: rgba(54, 214, 139, 0.12);
+    color: var(--green);
+    border-radius: 13px;
+    font-size: 23px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.investment-plan > h2 {
+    font-size: 31px;
+    margin-top: 23px;
+}
+
+.investment-plan > .muted {
+    margin-top: 5px;
+}
+
+.plan-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 20px 0;
+}
+
+.plan-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 12px;
+}
+
+.plan-detail span {
+    color: var(--muted);
+}
+
+.plan-detail b {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* BUTTONS */
+
+.investment-plan a {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 12px;
+    color: #062216;
+    background: var(--green);
+    font-weight: 800;
+    font-size: 13px;
+    margin-top: 18px;
+    transition: 0.2s;
+}
+
+.investment-plan a:active {
+    transform: scale(0.98);
+}
+
+.investment-plan a:hover {
+    background: #5be5a4;
+}
+
+.invite-mm{
+    font-size: 17px;
+
+}
+
+
+
+.primary-btn {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 12px;
+    color: #062216;
+    background: var(--green);
+    font-weight: 800;
+    font-size: 13px;
+    margin-top: 18px;
+    transition: 0.2s;
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+}
+
+.primary-btn:hover {
+    background: #5be5a4;
+}
+
+/* REFERRAL PAGE */
+
+.referral-banner {
+    background: linear-gradient(145deg, #175c3c, #10291e);
+    border: 1px solid #286341;
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.referral-circle {
+    margin: 0 auto 15px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    color: var(--green);
+    background: rgba(54, 214, 139, 0.15);
+}
+
+.referral-banner h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.referral-banner p {
+    color: #c3dfce;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.referral-code-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 19px;
+    border-radius: 17px;
+    margin-top: 18px;
+}
+
+.code-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 10px;
+}
+
+.code-row h2 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    overflow-wrap: anywhere;
+}
+
+.copy-btn {
+    border: 1px solid var(--green);
+    color: var(--green);
+    background: rgba(54, 214, 139, 0.08);
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.referral-code-card .small-text {
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+/* MY PAGE */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.large-profile-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.profile-details {
+    min-width: 0;
+}
+
+.profile-details h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+}
+
+.profile-details p {
+    color: var(--muted);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.service-card:active {
+    background: var(--card-light);
+}
+
+.service-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.deposit-icon {
+    background: rgba(54, 214, 139, 0.12);
+    color: var(--green);
+}
+
+.withdraw-icon {
+    background: rgba(101, 155, 255, 0.12);
+    color: #82aaff;
+}
+
+.service-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-text h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.service-text p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.service-arrow {
+    font-size: 25px;
+    color: var(--muted);
+}
+
+/* FORM CARDS */
+
+.info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: 17px;
+}
+
+.sub-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 3px 0 24px;
+}
+
+.sub-header h2 {
+    font-size: 22px;
+}
+
+.back-btn {
+    width: 41px;
+    height: 41px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: white;
+    font-size: 22px;
+}
+
+.form-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 21px 17px;
+}
+
+.form-top-icon {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: rgba(54, 214, 139, 0.12);
+    color: var(--green);
+    font-size: 27px;
+    margin-bottom: 17px;
+}
+
+.form-card h2 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.form-card > .muted {
+    margin-bottom: 25px;
+}
+
+.form-card label,
+.info-card label {
+    display: block;
+    color: #d7e3dc;
+    font-size: 12px;
+    margin: 19px 0 9px;
+    font-weight: 600;
+}
+
+.form-card input:not([type="radio"]),
+.info-card input {
+    width: 100%;
+    height: 48px;
+    background: #0a1711;
+    border: 1px solid #2b4134;
+    border-radius: 11px;
+    padding: 0 13px;
+    color: white;
+    font-size: 13px;
+}
+
+.form-card input::placeholder,
+.info-card input::placeholder {
+    color: #718579;
+}
+
+.form-card input:focus,
+.info-card input:focus {
+    border-color: var(--green);
+    outline: none;
+}
+
+.field-note {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 9px;
+}
+
+.payment-heading {
+    font-size: 14px;
+    margin: 27px 0 13px;
+}
+
+.payment-option {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--border);
+    background: #0b1711;
+    padding: 13px;
+    border-radius: 13px;
+    cursor: pointer;
+    margin: 10px 0 !important;
+}
+
+.payment-option:has(input:checked) {
+    border-color: var(--green);
+    background: rgba(54, 214, 139, 0.06);
+}
+
+.payment-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.payment-logo {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.phonepe-logo {
+    color: white;
+    background: #5f2da8;
+}
+
+.paytm-logo {
+    color: white;
+    background: #087bbd;
+}
+
+.payment-name {
+    flex: 1;
+}
+
+.payment-name b {
+    display: block;
+    color: white;
+    font-size: 13px;
+}
+
+.payment-name small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.radio-circle {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #60756a;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.payment-option:has(input:checked) .radio-circle {
+    border: 5px solid var(--green);
+}
+
+.secure-note {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* BOTTOM NAVIGATION */
+
+.bottom-nav {
+    position: fixed;
+    width: 100%;
+    max-width: 520px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    background: rgba(12, 25, 18, 0.97);
+    border-top: 1px solid var(--border);
+    padding: 10px 8px max(10px, env(safe-area-inset-bottom));
+    backdrop-filter: blur(15px);
+}
+
+.nav-item {
+    background: transparent;
+    border: none;
+    color: #82978a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 2px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.nav-icon {
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.nav-item.active {
+    color: var(--green);
+}
+
+.nav-item.active .nav-icon {
+    transform: translateY(-1px);
+}
+
+/* TOAST MESSAGE */
+
+.toast {
+    position: fixed;
+    z-index: 200;
+    left: 50%;
+    bottom: 95px;
+    transform: translate(-50%, 15px);
+    width: max-content;
+    max-width: calc(100% - 36px);
+    padding: 13px 17px;
+    border-radius: 12px;
+    background: #e6fff0;
+    color: #075b36;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 700px) {
+    body {
+        padding: 25px 0;
+    }
+
+    .app {
+        min-height: calc(100vh - 50px);
+        border: 1px solid var(--border);
+        border-radius: 25px;
+        padding-bottom: 110px;
+    }
+
+    .bottom-nav {
+        bottom: 25px;
+        border-radius: 0 0 25px 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .app {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .balance-card {
+        padding: 20px 16px;
+    }
+
+    .stat-card {
+        padding: 14px 11px;
+    }
+
+    .form-card {
+        padding: 18px 13px;
+    }
+
+    .investment-plan {
+        padding: 16px;
+    }
+}
+
+
+</style>
+</body>
+</html>
